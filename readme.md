@@ -62,6 +62,3 @@ Screenshot :
 ![alt text](./public/assets/images/screenshot/home.png)
 ![alt text](./public/assets/images/screenshot/blog_front.png)
 ![alt text](./public/assets/images/screenshot/details.png)
-
- Find me on  Linkedin  : [My Linkedin profile  link](https://www.linkedin.com/in/monjur-morshed-riyadh-6aaba465/)  \
- Email me : riyadhahmed777@gmail.com
