@@ -17,6 +17,9 @@
                 <li><a href="{{ URL :: to('/admin/users') }}">
                         <i class="fa fa-users"></i> <span>Usuarios</span></a>
                 </li>
+                <li><a href="{{ URL :: to('/admin/categories') }}">
+                        <i class="fa fa-book"></i> <span>Categorias</span></a>
+                </li>
                 <li><a href="{{ URL :: to('/admin/permissions') }}">
                         <i class="fa fa-book"></i> <span>Permisos</span></a>
                 </li>
