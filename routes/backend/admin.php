@@ -12,6 +12,8 @@ Route::get('/export', 'UserController@export')->name('export');
 Route::resource('permissions', 'PermissionController');
 Route::get('/allPermission', 'PermissionController@allPermission')->name('allPermission.permissions');
 
+Route::resource('categories', 'CategoryController');
+Route::get('/allCategory', 'CategoryController@allCategory')->name('allCategory.categories');
 Route::resource('roles', 'RoleController');
 Route::get('/allRole', 'RoleController@allRole')->name('allRole.roles');
 
