@@ -1,5 +1,5 @@
 .nav-tabs-custom>.nav-tabs>li.active {
-    border-top-color: #6da252;
+    border-top-color: #0066ff;
 }
 
 .skin-green-light .sidebar-menu > li > a {
@@ -8,108 +8,108 @@
 }
 
 .skin-green-light .sidebar-menu > li > a:hover {
-    border-left: 2px solid #28b06b;
+    border-left: 2px solid #4375ff;
     font-weight: normal;
 }
 
 .skin-green-light .sidebar-menu > li.active a {
-    border-left: 2px solid #28b06b;
+    border-left: 2px solid #001aff;
     font-weight: normal;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #6da252 !important;
+    background-color: #0066ff !important;
 }
 
 .form-control:focus {
-    border-color: #6da252 !important;
+    border-color: #0066ff !important;
 }
 
 #result-search {
-    border-color: #6da252;
+    border-color: #0066ff;
 }
 
 #profit {
-    background: #6da252;
+    background: #0066ff;
 }
 
 .info-box .progress .progress-bar.progress-bar-green, .progress-bar-success {
-    background-color: #6da252;
+    background-color: #0066ff;
 }
 .btn {
     box-shadow: 0 2px 6px 0 rgba(108,117,125,.5);
 }
 /* Bootstrap */
 .btn-success {
-    background-color: #6da252;
-    border-color: #629149;
+    background-color: #0066ff;
+    border-color: #4375ff;
 }
 
 .btn-success.hover, .btn-success:hover {
-    background-color: #629149;
+    background-color: #4375ff;
 }
 
 .btn-success.focus, .btn-success:focus {
-    background-color: #629149;
+    background-color: #4375ff;
     border-color: #2b4020;
 }
 
 .btn-success.active, .btn-success:active {
-    background-color: #6da252;
-    border-color: #629149;
+    background-color: #0066ff;
+    border-color: #4375ff;
 }
 
 .btn-success.active.focus, .btn-success.active:focus {
-    background-color: #4c7139;
-    border-color: #416131;
+    background-color: #264eff;
+    border-color: #264eff;
 }
 
 .bg-green {
-    background-color: #6da252 !important;
+    background-color: #0066ff !important;
 }
 
 .alert-success {
-    background-color: #6da252 !important;
-    border-color: #629149;
+    background-color: #0066ff !important;
+    border-color: #4375ff;
 }
 
 .label-success {
-    background-color: #6da252 !important;
+    background-color: #0066ff !important;
 }
 
 .box.box-success {
-    border-top-color: #6da252;
+    border-top-color: #0066ff;
 }
 
 .box.box-solid.box-success>.box-header {
-    background-color: #6da252;
+    background-color: #0066ff;
 }
 
 .box.box-solid.box-success {
-    border-color: #629149;
+    border-color: #4375ff;
 }
 
 .text-green {
-    color: #6da252;
+    color: #0066ff;
 }
 
 /* AdminLTE green skin */
 .skin-green-light .main-header .navbar {
-    background-color: #6da252;
+    background-color: #0066ff;
 }
 
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
-    background-color: #629149;
+    background-color: #4375ff;
 }
 
 .skin-green-light .main-header .logo {
-    background-color: #6da252;
+    background-color: #0066ff;
 }
 
 .skin-green-light .main-header li.user-header {
-    background-color: #6da252;
+    background-color: #0066ff;
 }
 
 .skin-green-light .main-header .logo:hover {
-    background-color: #629149;
+    background-color: #4375ff;
 }

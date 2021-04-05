@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\StdParent;
 use App\Models\Teacher;
 use App\Models\User;
+use App\Models\Category;
 use View;
 
 class DashboardController extends Controller
@@ -22,7 +23,8 @@ class DashboardController extends Controller
    {
       $users = User::all()->count();
       $blogs = News::all()->count();
-      return View::make('backend.admin.home', compact('users', 'blogs'));
+      $categories = Category::all()->count();
+      return View::make('backend.admin.home', compact('users', 'blogs', 'categories'));
    }
 
 

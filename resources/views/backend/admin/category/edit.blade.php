@@ -2,7 +2,7 @@
     <div id="status"></div>
     {{method_field('PATCH')}}
     <div class="form-group col-md-12 col-sm-12">
-        <label for=""> Permission Name </label>
+        <label for=""> Category Name </label>
         <input type="text" class="form-control" id="name" name="name" value="{{ $category->name }}"
                placeholder="" required>
         <span id="error_name" class="has-error"></span>
@@ -29,7 +29,7 @@
             // Messages for form validation
             messages: {
                 name: {
-                    required: 'Enter Permission Name'
+                    required: 'Enter Category Name'
                 }
             },
             submitHandler: function (form) {

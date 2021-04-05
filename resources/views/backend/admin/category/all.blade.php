@@ -5,10 +5,10 @@
         <div class="col-md-12">
             <div class="box box-success">
                 <div class="box-header with-border">
-                    <p class="panel-title"> Todos los permisos
+                    <p class="panel-title"> Todos los Categorias
                         @can('category-create')
                             <button class="btn btn-success" onclick="create()"><i class="glyphicon glyphicon-plus"></i>
-                                Nuevo Permiso
+                                Nueva Categoria
                             </button>
                         @endcan
                     </p>
@@ -20,8 +20,8 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nombre permiso</th>
-                                    <th>Gurd Name</th>
+                                    <th>Nombre Categoria</th>
+                                    
                                     <th>Accion</th>
                                 </tr>
                                 </thead>
@@ -71,7 +71,7 @@
         function create() {
 
             $("#modal_data").empty();
-            $('.modal-title').text('Add New Permission'); // Set Title to Bootstrap modal title
+            $('.modal-title').text('Add New Category'); // Set Title to Bootstrap modal title
 
             $.ajax({
                 type: 'GET',

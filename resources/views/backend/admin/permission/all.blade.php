@@ -5,10 +5,10 @@
         <div class="col-md-12">
             <div class="box box-success">
                 <div class="box-header with-border">
-                    <p class="panel-title"> Todos los permisos
+                    <p class="panel-title"> All Permissions
                         @can('permission-create')
                             <button class="btn btn-success" onclick="create()"><i class="glyphicon glyphicon-plus"></i>
-                                Nuevo Permiso
+                                New Permission
                             </button>
                         @endcan
                     </p>
@@ -20,9 +20,9 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nombre permiso</th>
+                                    <th>Permission Name</th>
                                     <th>Gurd Name</th>
-                                    <th>Accion</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
                             </table>

@@ -293,7 +293,7 @@ ol {
 }
 
 .nav-section {
-    background: #6aaf08;
+    background: #0066ff;
 }
 
 .nav-section .nav-right {
@@ -966,7 +966,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-    background-color: #055316;
+    background-color: #0066ff;
     background-image: url("../images/footer-bg.png");
     background-repeat: no-repeat;
     background-position: center 75px;
@@ -1700,10 +1700,10 @@ ul.notice-bar li {
 }
 
 .topbar {
-    height: 45px;
-    background: #6aaf08;
+    height: 1px;
+    background: #0066ff;
     color: #fff;
-    padding: 10px;
+    padding: 1px;
 
 }
 

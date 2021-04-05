@@ -231,6 +231,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/PermissionController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/RoleController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/SettingsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/Category.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/UserController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Student/StudentSelfController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
@@ -1109,6 +1110,11 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/role/create.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/role/edit.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/role/view.blade.php" />
+        <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/action.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/all.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/view.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/setting/action.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/setting/all.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/admin/setting/edit.blade.php" />

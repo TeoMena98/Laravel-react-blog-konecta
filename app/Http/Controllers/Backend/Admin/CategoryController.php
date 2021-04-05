@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers\Backend\Admin;
 
-use App\Models\Permission as UserPermission;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-use Spatie\Permission\Models\Permission;
-use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
+use Yajra\DataTables\DataTables;
 use View;
 use DB;
 
-class PermissionController extends Controller
+class CategoryController extends Controller
 {
    /**
     * Display a listing of the resource.
@@ -22,15 +22,15 @@ class PermissionController extends Controller
     */
    public function index()
    {
-      return view('backend.admin.permission.all');
+      return view('backend.admin.category.all');
    }
 
-   public function allPermission()
+   public function allcategory()
    {
       DB::statement(DB::raw('set @rownum=0'));
-      $usepermission = UserPermission::get(['permissions.*', DB::raw('@rownum  := @rownum  + 1 AS rownum')]);
-      return Datatables::of($usepermission)
-        ->addColumn('action', 'backend.admin.permission.action')
+      $usecategory = Category::get(['categories.*', DB::raw('@rownum  := @rownum  + 1 AS rownum')]);
+      return Datatables::of($usecategory)
+        ->addColumn('action', 'backend.admin.category.action')
         ->make(true);
    }
 
@@ -42,9 +42,9 @@ class PermissionController extends Controller
    public function create(Request $request)
    {
       if ($request->ajax()) {
-         $haspermision = auth()->user()->can('permission-create');
+         $haspermision = auth()->user()->can('category-create');
          if ($haspermision) {
-            $view = View::make('backend.admin.permission.create')->render();
+            $view = View::make('backend.admin.category.create')->render();
             return response()->json(['html' => $view]);
          } else {
             abort(403, 'Sorry, you are not authorized to access the page');
@@ -66,7 +66,7 @@ class PermissionController extends Controller
       if ($request->ajax()) {
          // Setup the validator
          $rules = [
-           'name' => 'required|unique:permissions'
+           'name' => 'required|unique:categories'
          ];
 
          $validator = Validator::make($request->all(), $rules);
@@ -76,7 +76,7 @@ class PermissionController extends Controller
               'errors' => $validator->getMessageBag()->toArray()
             ]);
          } else {
-            Permission::findOrCreate($request->name);
+            Category::create($request->name);
             return response()->json(['type' => 'success', 'message' => "Successfully Created"]);
          }
       } else {
@@ -91,7 +91,7 @@ class PermissionController extends Controller
     * @param  int $id
     * @return \Illuminate\Http\Response
     */
-   public function show(Request $request, Permission $permission)
+   public function show(Request $request, Category $category)
    {
       if ($request->ajax()) {
 
@@ -106,12 +106,12 @@ class PermissionController extends Controller
     * @param  int $id
     * @return \Illuminate\Http\Response
     */
-   public function edit(Request $request, Permission $permission)
+   public function edit(Request $request, Category $category)
    {
       if ($request->ajax()) {
-         $haspermision = auth()->user()->can('permission-edit');
+         $haspermision = auth()->user()->can('category-edit');
          if ($haspermision) {
-            $view = View::make('backend.admin.permission.edit', compact('permission'))->render();
+            $view = View::make('backend.admin.category.edit', compact('category'))->render();
             return response()->json(['html' => $view]);
          } else {
             abort(403, 'Sorry, you are not authorized to access the page');
@@ -128,14 +128,14 @@ class PermissionController extends Controller
     * @param  int $id
     * @return \Illuminate\Http\Response
     */
-   public function update(Request $request, Permission $permission)
+   public function update(Request $request, Category $category)
    {
       if ($request->ajax()) {
          // Setup the validator
-         Permission::findOrFail($permission->id);
+         Category::findOrFail($category->id);
 
          $rules = [
-           'name' => 'required|unique:permissions,name,' . $permission->id
+           'name' => 'required|unique:categories,name,' . $category->id
          ];
 
          $validator = Validator::make($request->all(), $rules);
@@ -145,8 +145,8 @@ class PermissionController extends Controller
               'errors' => $validator->getMessageBag()->toArray()
             ]);
          } else {
-            $permission->name = $request->name;
-            $permission->save();
+            $category->name = $request->name;
+            $category->save();
             return response()->json(['type' => 'success', 'message' => "Successfully Updated"]);
          }
       } else {
@@ -160,8 +160,21 @@ class PermissionController extends Controller
     * @param  int $id
     * @return \Illuminate\Http\Response
     */
-   public function destroy($id)
-   {
-      //
-   }
+  
+      public function destroy($id, Request $request)
+      {
+         if ($request->ajax()) {
+            $haspermision = auth()->user()->can('category-delete');
+            if ($haspermision) {
+               $user = Category::findOrFail($id); //Get user with specified id
+               $user->delete();
+               return response()->json(['type' => 'success', 'message' => "Successfully Deleted"]);
+            } else {
+               abort(403, 'Sorry, you are not authorized to access the page');
+            }
+         } else {
+            return response()->json(['status' => 'false', 'message' => "Access only ajax request"]);
+         }
+      }
+   
 }
